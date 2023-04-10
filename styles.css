@@ -14,12 +14,12 @@ h2 {
 #cloud1 {
     position: absolute;
     left: 700px;
-    top: 100px;
+    bottom: 25px;
 }
 #cloud2 {
     position: absolute;
     left: 50px;
-    top: 125px;
+    bottom: 25px;
 }
 #container {
     position: relative;
@@ -70,19 +70,18 @@ body.switch {
 }
 #sun {
     position: absolute;
-    left: 400px;
-    top: 25px;
+    left: 350px;
+    top: 15px;
     transition-property: opacity;
     transition-duration: 1s;
     opacity: 1;
 }
 #sun.switch{
     opacity: 0;
-    
 }
 #moon {
     position: relative;
-    left: 400px;
+    left: 375px;
     top: 25px;
     transition-property: opacity;
     transition-duration: 1s;
