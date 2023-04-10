@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+}
+/* no switch styling */
+header {
+    margin: 0 auto 2em auto;
+}
+#title{
+    padding-left: 25px;
+}
+h2 {
+    font-weight: 300;
+}
+#cloud1 {
+    position: absolute;
+    left: 700px;
+    top: 100px;
+}
+#cloud2 {
+    position: absolute;
+    left: 50px;
+    top: 125px;
+}
+#container {
+    position: relative;
+    width: 100%;
+    max-width: 1366px;
+    /* make sure the columns don't get too small and text stays readable */
+    min-width: 900px;
+    margin: 1em auto;
+    padding-top: 2em;
+}
+main {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1em auto;
+}
+a {
+    text-decoration: none;
+}
+ol, ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+section li {
+    padding-left: 1.2em;
+}
+
+/* switch content */
+body {
+    background-color: #b8e2f2;
+    color: #4663ac;
+    transition: all 2s;
+    font-family: 'Fira Sans', sans-serif;
+}
+body.switch {
+    background-color: #150c25;
+    color: #FFEFFF;
+}
+#banner {
+    position: relative;
+    width: 1100px;
+    height: 250px;
+    margin: auto;
+    overflow: hidden;
+    /* decor */
+    border: 5px #4663ac solid;
+    border-radius: 10px;
+}
+#sun {
+    position: absolute;
+    left: 400px;
+    top: 25px;
+    transition-property: opacity;
+    transition-duration: 1s;
+    opacity: 1;
+}
+#sun.switch{
+    opacity: 0;
+    
+}
+#moon {
+    position: relative;
+    left: 400px;
+    top: 25px;
+    transition-property: opacity;
+    transition-duration: 1s;
+    opacity: 0;
+}
+#moon.switch{
+    opacity: 1;
+}
+#banner.switch {
+    transition: all 2s;
+    border-color: #FFEFFF;
+}
+main section {
+    width: 25%;
+    border: 5px #4663ac solid;
+    border-radius: 10px;
+    margin: 0 .25em;
+    padding: 1em;
+    max-width: 300px;
+    color: #4663ac;
+}
+main section.switch {
+    border-color: #FFEFFF;
+    transition: all 2s;
+    color: #FFEFFF;
+}
+section a {
+    line-height: 1.1em;
+    display: inline-block;
+    padding: .5em;
+    color: #4663ac;
+    font-weight: 300;
+    transition: 0.5s; 
+}
+section a:hover {
+    color: #001c57;
+}
+section.switch a {
+    color: #FFEFFF;
+}
+section.switch a:hover {
+    color: #fca1fc;
+}
+button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 12px;
+    background-color: #150c25;
+    color: #FFEFFF;
+    border: 3px #FFEFFF solid;
+    border-radius: 5px;
+    transition: 0.5s; 
+}
+button:hover {
+    background-color: #FFEFFF;
+    color: #150c25;
+    cursor: pointer;
+}
+button.switch {
+    background-color: #b8e2f2;
+    border-color: #4663ac;
+    color: #4663ac;
+}
+button.switch:hover {
+    background-color: #4663ac;
+    color: #b8e2f2;
+}
