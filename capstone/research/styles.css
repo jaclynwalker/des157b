@@ -12,16 +12,13 @@ h1, h2{
     font-weight: 700;
     text-align: center;
 }
-p, ol {
+p {
     font-weight: 300;
     padding-left: 50px;
     padding-bottom: 25px;
     line-height: 1.5em;
     word-spacing: .15em;
     max-width: 500px;
-}
-p:last-of-type {
-    padding-bottom: 0;
 }
 #content{
     margin: auto;
