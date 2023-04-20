@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <title>Blockbuster Vide</title>
+
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <video id="myVideo" muted autoplay loop playsinline>
+        <source src="media/video.webm" type="video/webm" width="1280">
+        <source src="media/video-short.mp4" type="video/mp4" width="1280">
+        <p>Your browser doesn't support HTML5 video. Here is a <a href="media/video.mp4" width="1280">link to the video</a>
+            instead.</p>
+    </video>
+    <i class="fas fa-expand"></i>
+    <!-- loading icon here -->
+    <i class="fa-solid fa-star"></i>
+
+    <section id="poem">
+        <p id="line1" class="hidden">I found myself</p>
+        <p id="line2" class="hidden">in late night drives</p>
+        <p id="line3" class="hidden">with no destination.</p>
+    </section>
+
+</body>
+
+</html>

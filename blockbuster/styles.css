@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Dosis', sans-serif;
+    color: #89cff1;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#poem p {
+    position: absolute;
+    padding: 1em;
+    font-size: 2em;
+    transition: all 2.5s;
+}
+
+#line1 {
+    bottom: 10%;
+    right: 10%;
+}
+
+#line2 {
+    bottom: 20%;
+    right: 20%;
+}
+
+#line3 {
+    bottom: 30%;
+    right: 30%;
+}
+
+.fa-expand {
+    font-size: 36px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #89cff1;
+}
+
+.fa-expand:hover {
+    cursor: pointer;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.showing {
+    opacity: 1;
+}
+.fa-star{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 36px;
+    color: antiqueWhite;
+    transform: translate(-50%, -50%);
+    animation: star 2s infinite alternate ease-in-out;
+}
+@keyframes star {
+    0% {
+        opacity: .5;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+
+    }
+    100% {
+        opacity: .5;
+        transform: scale(1.5);
+    }
+}
