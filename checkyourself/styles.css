@@ -1,0 +1,29 @@
+body {
+    /* background */
+    box-sizing: border-box;
+    height: 100vh;
+    background: rgb(144,230,255);
+    background: linear-gradient(333deg, rgba(144,230,255,1) 0%, rgba(218,243,255,1) 100%);
+    /* fonts */
+    font-family: 'Cabin', sans-serif;
+    color: #0F5E9C;
+    text-align: center;
+}
+header{
+    padding: 50px;
+}
+/* dropdown */
+#picker {
+    border: 3px solid #0F5E9C;
+    padding: 10px;
+    border-radius: 5px;
+}
+#result {
+    padding: 50px;
+}
+#result img {
+    padding: 20px;
+}
+#result p {
+    padding-bottom: 10px;
+}
