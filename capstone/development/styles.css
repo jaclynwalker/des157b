@@ -1,7 +1,7 @@
 body {
     font-family: 'Rubik', sans-serif;
-    box-sizing:border-box;
-    height:100vh;
+    box-sizing: border-box;
+    height: 100vh;
     background: rgb(66,255,57);
     background: linear-gradient(333deg, rgba(66,255,57,1) 0%, rgba(108,188,255,1) 100%);
 }
