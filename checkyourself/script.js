@@ -11,32 +11,29 @@ function createSelectList(data){
     let html = '<option>---</option>';
     //converts the main object keys into an array
     const dataPoints = Object.keys(data);
-    console.log(dataPoints);
     dataPoints.forEach(function(eachPoint){
         html += `<option value="${eachPoint}">${data[eachPoint].time}</option>`
     });
     return html;
 }
+//changes data when a new value is picked
 document.querySelector('#picker').addEventListener('change', function(){
     const newValue = this.value; //this keyword refers to the changed value
     console.log(newValue);
     updateInterface(newValue, globalData);
 });
 
-// function updateInterface(value, jsonData){
-//     let html = '<p>';
-//     html += `At ${jsonData[value].time} I drank ${jsonData[value].water} cups of water`
-//     document.querySelector('#result').innerHTML = html;
-// }
 function updateInterface(value, jsonData){
     let html = '<p>';
     let waterImgs;
+    // changes statement based on selected data
     if (jsonData[value].water == 1){
-        html += `At ${jsonData[value].time} I drank ${jsonData[value].water} cup of water.`
+        html += `At ${jsonData[value].time}, I drank ${jsonData[value].water} cup of water.`
     }
     else {
-        html += `At ${jsonData[value].time} I drank ${jsonData[value].water} cups of water.`
+        html += `At ${jsonData[value].time}, I drank ${jsonData[value].water} cups of water.`
     }
+    //changes images of water cups
     if (jsonData[value].water == 0){
         waterImgs = '<img src="images/waterglass-empty.png" alt="water" width="200">';
     }
