@@ -29,6 +29,9 @@ p {
     font-size: 12px;
     margin-top: 0;
 }
+#link {
+    text-align: center;
+}
 #content{
     margin: auto;
     max-width: 600px;
