@@ -2,28 +2,30 @@
     console.log('reading js');
 
     $(document).ready(function(){
-        var rows = 4;
-        var columns = 4;
-        var pieces = "";
-        var place = 1;
-        order = 0;
-        for (var i=0; i<rows; i++)
+        const puzzleContainer = $("#puzzleContainer");
+
+        const rows = 4;
+        const columns = 4;
+        let pieces = "";
+        let place = 1;
+        let pieceOrder = 0;
+        for (let i=0; i<rows; i++)
         {
-            for (var j=0; j<columns; j++)
+            for (let j=0; j<columns; j++)
             {
-                pieces+= `<div class='piece'><img src='images/gradient${place}.jpg' width=100 data-order=${order}></div>`;
+                pieces+= `<div class='piece'><img src='images/tana${place}.jpg' width=100 data-order=${pieceOrder}></div>`;
                 place++;
-                order++;
+                pieceOrder++;
             }
         }
         // console.log(pieces);
-        $("#puzzleContainer").html(pieces);
+        puzzleContainer.html(pieces);
         $("#btnStart").click(function(){
             console.log("button clicked")
-            var pieces = $("#puzzleContainer div");
+            let pieces = $("#puzzleContainer div");
             pieces.each(function(){
-                var leftPosition = Math.floor(Math.random()*290)+25 + "px";
-                var topPosition = Math.floor(Math.random()*290)+25 + "px";
+                const leftPosition = Math.floor(Math.random()*290)+25 + "px";
+                const topPosition = Math.floor(Math.random()*290)+25 + "px";
                 $(this).addClass("draggablePiece").css({
                     position: "absolute", 
                     left: leftPosition,
@@ -31,17 +33,22 @@
                 })
                 $("pieceContainer").append($(this));
             });
-            var emptyString = "";
-            for (var i=0; i<rows; i++)
+            let emptyString = "";
+            let spaceOrder = 0;
+            for (let i=0; i<rows; i++)
             {
-                for (var j=0; j<columns; j++)
+                for (let j=0; j<columns; j++)
                 {
-                    emptyString+= `<div class='piece droppableSpace'></div>`;
+                    emptyString+= `<div class='piece droppableSpace' data-order=${spaceOrder}></div>`;
+                    spaceOrder++;
                 }
             }
-            $("#puzzleContainer").append(emptyString);
+            // console.log(emptyString);
+            puzzleContainer.append(emptyString);
             $(this).hide();
-            $("#btnReset").show();
+            const btnReset = $("#btnReset")
+            btnReset.show();
+            $("#btnComplete").show();
             implementLogic();
         });
         function implementLogic(){
@@ -60,8 +67,8 @@
                     return!$(this).hasClass("piecePresent")
                 },
                 drop:function(event,ui){
-                    var draggableElement = ui.draggable;
-                    var droppedOn = $(this);
+                    const draggableElement = ui.draggable;
+                    const droppedOn = $(this);
                     droppedOn.addClass("piecePresent");
                     $(draggableElement).addClass("droppedPiece").css({
                         top:0,
@@ -70,9 +77,12 @@
                     }).appendTo(droppedOn);
                 }
             });
+            $("#btnComplete").click(function(){
+                $("#completedPuzzle").show().addClass("animate__backInDown");
+            })
             $("#btnReset").click(function(){
                 window.location.reload();
-            })
+            });
         }
     })
 })();
