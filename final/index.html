@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Puzzle</title>
+    
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="script.js" defer></script>
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.9.3/tsparticles.confetti.bundle.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="start">
+        <h1>Davis Centennial Seal Puzzle</h1>
+        <div id="instructions">
+            <p>Welcome to the Davis Centennial Seal Puzzle!</p>
+            <p>View the puzzle to remember the order. Then click start and drag and drop the pieces into their correct spot!</p>
+            <p>Hit reset to view the main menu and restart the puzzle.</p>
+        </div>
+        <button id="bgnPuzzle">Begin Puzzle</button>
+    </div>
+    <div id="container">
+        <div id="boxes">
+            <div id="pieceContainer"></div>
+            <div id="puzzleContainer"></div>
+        </div>
+        <div id="bottomControls">
+            <button id="btnStart">Start</button>
+            <p id="incorrect" class="statements">Incorrect</p>
+            <p id="correct" class="statements">Correct</p>
+            <div id="flexButtons">
+                <button id="btnReset">Reset & View Main Menu</button>
+                <button id="btnComplete">I Have Completed the Puzzle</button>
+            </div>
+        </div>
+    </div>
+    <div id="end">
+        <h1>Congratulations! You completed the Davis Centennial Seal Puzzle</h1>
+        <div id="resources">
+            <p>Thank you for taking the time to complete the Davis Centennial Seal Puzzle.</p>
+            <p>Learn more about the seal:</p>
+            <button><a href="https://www.cityofdavis.org/city-hall/city-manager-s-office/arts-culture/davis-centennial-seal">City of Davis</a></button>
+            <button><a href="https://susanshelton.com/Seals/Davis-Centennial-Seal">Susan Shelton</a></button>
+        </div>
+        <button id="playAgain">Play Again</button>
+    </div>
+</body>
+</html>
